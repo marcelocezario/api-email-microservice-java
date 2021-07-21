@@ -20,7 +20,7 @@ public class EmailResource {
 	@PostMapping(value = "/novo")
 	public ResponseEntity<Void> envioEmail(@RequestBody Email email) {
 		
-		service.preparaEmail(email.getEmailDestinatario(), email.getAssunto(), email.getMensagem());
+		service.preparaEmailHtml(email);
 		
 		return null;
 	}
